@@ -1,7 +1,7 @@
 # iRadio
 iRadio (Minimal JavaScript Internet Radio Player) with Visualization and Metadata<br><br>
 
-<img src="https://i.ibb.co/d7Nk8Ns/preview.png"><br><br>
+<img src="https://i.ibb.co/NV8Mx4v/iRadioWK.jpg"><br><br>
 
 -Add unlimited number of stations (default: 9)<br><br>
 -Play/Stop buttons<br><br>
