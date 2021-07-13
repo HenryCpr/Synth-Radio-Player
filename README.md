@@ -1,4 +1,4 @@
-# iRadio
+# iRadioWK
 iRadio (Minimal JavaScript Internet Radio Player) with Visualization and Metadata<br><br>
 
 <img src="https://i.ibb.co/NV8Mx4v/iRadioWK.jpg"><br><br>
