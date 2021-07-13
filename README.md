@@ -8,8 +8,6 @@ iRadio (Minimal JavaScript Internet Radio Player) with Visualization and Metadat
 -Volume Control<br><br>
 -Metadata (https://github.com/eshaz/icecast-metadata-js) Included<br><br>
 -Visualizer (https://github.com/hvianna/audioMotion-analyzer) Included <br><br>
- 
-A live demo is available here: http://elounge.org/<br><br>
 
 It will play any internet radio stream, however metadata only shows on stations that don't enforce the cors policy.<br><br>
 
