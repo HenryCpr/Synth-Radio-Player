@@ -7,7 +7,6 @@
 .container {
   height:32px;
   width: 384px;
-  right:0;
   position: absolute;
   z-index:999999999 !important;
   font-family: arial;

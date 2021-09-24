@@ -2,28 +2,11 @@
 <head>
   <link rel="stylesheet" type="text/css" href="./reset.css">
     <link rel="stylesheet" type="text/css" href="./index.css">
-  <link rel="apple-touch-icon" sizes="57x57" href="myfav/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="myfav/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="myfav/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="myfav/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="myfav/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="myfav/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="myfav/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="myfav/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="myfav/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="myfav/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="myfav/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="myfav/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="myfav/favicon-16x16.png">
-<link rel="manifest" href="myfav/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="myfav/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+  <link rel="icon" sizes="128x128" href="Macintosh_Icon.icns">
+  <link rel="icon" href="box.png" type="image/x-icon">
+  <link rel="icon" href="Windows_icon.ico" type="image/x-icon">
   <script src="jquery-3.5.1.min.js"></script> 
   <script src="jquery-ui.min.js"></script> 
-  
-
- <meta name="viewport" content="width=416,user-scalable=no">
     <script src="audioMotion-analyzer.js"></script>
   <style>
 @import url(https://fonts.googleapis.com/css?family=Raleway:500);
@@ -225,7 +208,7 @@ function checkviz()
 
 	
 	
-	<div style="background-color:#eee;height:32px;width:32px;"><img src="iRadioLogo.png" width="32" height="32" style="float:left;left:0;" onclick="checkviz();">
+	<div style="background-color:#eee;height:32px;width:32px;"><img src="box.png" width="32" height="32" style="float:left;left:0;" onclick="checkviz();">
 <!--	<select id=""  style=
     "color: #111;cursor:pointer;border:0;">
       <option value="0" style="">
@@ -272,9 +255,12 @@ function checkviz()
       </option>
     </select>
       -->
-      <div style="position:relative:width:384px;height:32px;">
-       <div class="container">
-        <div class="custom-select-wrapper">
+	<div style="max-width:416px;margin:0 auto;top:0;position:absolute;left:0;right:0;">
+	
+	<div style="background-color:#eee;height:32px;width:32px;cursor:pointer;"><img src="box.png" width="32" height="32" style="float:left;left:0;" onclick="checkviz();">
+      <div style="position:relative:width:384px;height:32px;float:left;">
+       <div class="container" style="float:left;">
+        <div class="custom-select-wrapper" style="float:left;">
             <div class="custom-select">
                 <div class="custom-select__trigger"><span></span>
                     <div class="arrow"></div>
@@ -297,7 +283,7 @@ function checkviz()
             </div>
         </div>
     </div>
-    <div id="selectstation" class="box" style="position:absolute;width:384px;height:32px;z-index:9999999;right:0;"></div>
+    <div id="selectstation" class="box" style="position:absolute;width:384px;height:32px;z-index:9999999;"></div>
     </div>
 
     <script type="text/javascript" src="./index.js"></script>
@@ -305,10 +291,10 @@ function checkviz()
       
     </div>
     <div id="metabox" class="scroll-box" style=
-    "overflow: hidden;position: relative;background:#fff;height: 32px; width:416px;z-index:9999999;">
+    "overflow: hidden;position: relative;background:linear-gradient(lightblue,dodgerblue);height: 32px; width:416px;z-index:9999999;">
 
       <div id="metadata" class="scroll-text" style=
-      "position:absolute;white-space: nowrap;height:32px;line-height:32px;font-size:16px;font-family:digital;color:#000;text-shadow: 0 0 5px #fff;z-index:9999999999;">
+      "position:absolute;white-space: nowrap;height:32px;line-height:32px;font-size:16px;font-family:digital;color:#fff;text-shadow: 0 0 5px #fff;z-index:9999999999;">
       </div>
     </div>
   
@@ -360,7 +346,7 @@ function checkviz()
 
 
     player1 = new IcecastMetadataPlayer("http://stream.nightride.fm/nightride.ogg", { onMetadata, metadataTypes: "ogg", codec: "vorbis"});         
-    player2 = new IcecastMetadataPlayer("http://s4.citrus3.com:8232/stream.mp3", { onMetadata, });
+    player2 = new IcecastMetadataPlayer("https://s4.radio.co/s0e01ae4e1/low", { onMetadata, });
     player3 = new IcecastMetadataPlayer("http://eu1.reliastream.com:7017/MDR", { onMetadata, });
     player4 = new IcecastMetadataPlayer("http://94.130.113.214:8000/chill", { onMetadata, metadataTypes: ("icy" ,"ogg"),  codec: "vorbis"});
     player5 = new IcecastMetadataPlayer("https://media-ssl.musicradio.com/ClassicFM", { metadataTypes: ("icy" ,"ogg"), codec: "vorbis" });
@@ -392,7 +378,7 @@ function checkviz()
                 player11.stop();
                 player12.stop();
                 player13.stop();
-               	document.getElementById("metadata").innerText = "";
+               	document.getElementById("metadata").innerText = "Now Playing:";
 	}
 
    
@@ -491,7 +477,7 @@ function checkviz()
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.TITLE;
+      document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.TITLE;
     };
 
         player1 = new IcecastMetadataPlayer("http://stream.nightride.fm/nightride.ogg", { onMetadata, metadataTypes:"ogg", codec: "vorbis" });          
@@ -506,15 +492,12 @@ function checkviz()
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
+      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.TITLE;
     };
 
-        player2 = new IcecastMetadataPlayer("http://s4.citrus3.com:8232/stream.mp3", { onMetadata });
+        player2 = new IcecastMetadataPlayer("https://s4.radio.co/s0e01ae4e1/low", { onMetadata,  metadataTypes: ("icy" ,"ogg"),  codec: "vorbis" });
                 audioMotion.connectInput( player2.audioElement );
-                player2.play();
-                 
-              
-            
+                player2.play(); 
             
                 
         
@@ -529,7 +512,7 @@ function checkviz()
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
+      document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.StreamTitle;
     };
 
         player3 = new IcecastMetadataPlayer("http://eu1.reliastream.com:7017/MDR", { onMetadata, });
@@ -543,7 +526,7 @@ function checkviz()
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-         document.getElementById("metadata").innerHTML = metadata.TITLE;
+         document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.TITLE;
     };
 
         player4 = new IcecastMetadataPlayer("http://94.130.113.214:8000/chill", { onMetadata,  metadataTypes: ("icy" ,"ogg"), codec: "vorbis",});
@@ -557,7 +540,7 @@ function checkviz()
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-         document.getElementById("metadata").innerHTML = metadata.TITLE;
+         document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.TITLE;
     };
 
         player5 = new IcecastMetadataPlayer("https://media-ssl.musicradio.com/ClassicFM", { onMetadata,  metadataTypes:  ("icy" ,"ogg"), codec: "vorbis",});
@@ -571,7 +554,7 @@ function checkviz()
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.TITLE;
+      document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.TITLE;
     };
 
         player6 = new IcecastMetadataPlayer("http://ibizaglobalradio.streaming-pro.com:8024/;", { onMetadata,  metadataTypes: ("icy" ,"ogg"), codec: "vorbis",});
@@ -584,7 +567,7 @@ function checkviz()
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
+      document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.StreamTitle;
     };
 
         player7 = new IcecastMetadataPlayer("https://kathy.torontocast.com:1825/stream", { onMetadata, metadataTypes: ("icy","ogg"), });
@@ -598,7 +581,7 @@ function checkviz()
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.TITLE;
+      document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.TITLE;
     };
 
         player8 = new IcecastMetadataPlayer("http://176.31.107.8:8430/Radio-Electro-Paris", { onMetadata, metadataTypes: "ogg", });
@@ -611,7 +594,7 @@ function checkviz()
     {
                  stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.TITLE;
+      document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.TITLE;
     };
 
         player9 = new IcecastMetadataPlayer("http://184.75.223.178:8083/stream", { onMetadata,  metadataTypes: ("icy" ,"ogg"), });
@@ -624,7 +607,7 @@ function checkviz()
     {
                  stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
+      document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.StreamTitle;
     };
 
         player10 = new IcecastMetadataPlayer("https://22343.live.streamtheworld.com/SER_MALLORCA.mp3", { onMetadata, metadataTypes: ("icy", "ogg"),});
@@ -636,7 +619,7 @@ function checkviz()
     {
                  stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
+      document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.StreamTitle;
     };
 
         player11 = new IcecastMetadataPlayer("https://wecast-m02-04.flumotion.com/copesedes/mallorca.mp3", { onMetadata, metadataTypes: ("icy", "ogg"), });
@@ -651,7 +634,7 @@ function checkviz()
     {
                  stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
+      document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.StreamTitle;
     };
 
         player12 = new IcecastMetadataPlayer("https://streamingv2.shoutcast.com/Jazz4ever", { onMetadata, });
@@ -664,7 +647,7 @@ function checkviz()
     {
                  stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
+      document.getElementById("metadata").innerHTML =  " Now Playing: " + metadata.StreamTitle;
     };
 
         player13 = new IcecastMetadataPlayer("http://stream.dancewave.online:8080/dance.mp3", { onMetadata, });
@@ -765,3 +748,60 @@ $("#volume").slider({
 }  
 </style>
 </html>
+
+<script>
+function getTheColor( colorVal ) {
+  	var theColor = "";
+  	if ( colorVal < 50 ) {
+			    myRed = 255;
+			    myGreen = parseInt( ( ( colorVal * 2 ) * 255 ) / 100 );
+		  }
+	  else 	{
+			    myRed = parseInt( ( ( 100 - colorVal ) * 2 ) * 255 / 100 );
+			    myGreen = 255;
+		  }
+	  theColor = "rgb(" + myGreen + "," + myRed + ",0)"; 
+  	return( theColor ); 
+}
+
+function refreshSwatch() {
+	var coloredSlider = $( "#volume" ).slider( "value" ),
+	myColor = getTheColor( coloredSlider );
+
+	$( "#volume .ui-slider-range-min" ).css( "background-color", myColor );
+
+	$( "#volume .ui-state-default, .ui-widget-content .ui-state-default" ).css( "background-color", myColor );
+}
+/*
+$(function() {
+	  $( "#volume" ).slider({
+		    orientation: "horizontal",
+		    range: "min",
+		    max: 100,
+		    value: 0,
+		    slide: refreshSwatch,
+		    change: refreshSwatch
+	  });
+});*/
+</script>
+<script>
+$("#volume").slider({
+  	min: 0,
+  	max: 100,
+  	value: 25,
+		range: "min",
+    change: refreshSwatch,
+  	slide: function(event, ui) {
+    	setVolume(ui.value / 100);
+  	}, 
+		
+		   
+	});
+	
+	function setVolume(myVolume) {
+    var myMedia = audioMotion;
+    myMedia.volume = myVolume;
+	refreshSwatch();
+	}
+	refreshSwatch();
+  </script></div>
