@@ -1,7 +1,7 @@
 # iRadioWK
 iRadio (Minimal JavaScript Internet Radio Player) with Visualization and Metadata<br><br>
 
-Live Demo: http://electrolex.myartsonline.com/iRadioWK/index.html
+Live Demo: http://electrolex.myartsonline.com
 
 <img src="https://i.ibb.co/NV8Mx4v/iRadioWK.jpg"><br><br>
 
