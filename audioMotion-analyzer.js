@@ -33,13 +33,13 @@ class AudioMotionAnalyzer {
 
 		this._gradients = {
 			classic: {
-				bgColor: '#fff',
+				bgColor: '#000',
 				colorStops: [
 				 // 'hsl( 0, 100%, 50% )',
-				'hsl( 58, 100%, 50% )',
+				'hsl( 0, 0%, 100% )',
 		
 				//	'hsl( 29, 100%, 50% )',
-					'hsl( 0, 100%, 50% )',
+					'hsl( 75, 84%, 65% )',
 				]
 			},
 			prism:   {
@@ -959,7 +959,7 @@ class AudioMotionAnalyzer {
 		const [ ledCount, ledSpaceH, ledSpaceV, ledHeight ] = this._leds || [];
 
 		// select background color
-		const bgColor = ( ! this.showBgColor || isLedDisplay && ! this.overlay ) ? '#fff' : this._gradients[ this._gradient ].bgColor;
+		const bgColor = ( ! this.showBgColor || isLedDisplay && ! this.overlay ) ? '#000' : this._gradients[ this._gradient ].bgColor;
 
 		// compute the effective bar width, considering the selected bar spacing
 		// if led effect is active, ensure at least the spacing from led definitions
@@ -1465,14 +1465,14 @@ class AudioMotionAnalyzer {
 		// clear scale canvas
 		canvasX.width |= 0;
 
-		scaleX.fillStyle = scaleR.strokeStyle = '#fffc';
+		scaleX.fillStyle = scaleR.strokeStyle = '#000c';
 		scaleX.fillRect( 0, 0, canvasX.width, canvasX.height );
 
 		scaleR.arc( radius, radius, radius - scaleHeight / 2, 0, TAU );
 		scaleR.lineWidth = scaleHeight;
 		scaleR.stroke();
 
-		scaleX.fillStyle = scaleR.fillStyle = '#fff';
+		scaleX.fillStyle = scaleR.fillStyle = '#000';
 		scaleX.font = `${ canvasX.height >> 1 }px sans-serif`;
 		scaleR.font = `${ scaleHeight >> 1 }px sans-serif`;
 		scaleX.textAlign = scaleR.textAlign = 'center';
@@ -1701,7 +1701,7 @@ class AudioMotionAnalyzer {
 
 		// if not in overlay mode, paint the canvas black
 		if ( ! this.overlay ) {
-			ctx.fillStyle = '#fff';
+			ctx.fillStyle = '#000';
 			ctx.fillRect( 0, 0, newWidth, newHeight );
 		}
 
