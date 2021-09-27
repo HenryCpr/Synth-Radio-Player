@@ -73,29 +73,6 @@
          offset="1"
          id="stop1070" />
     </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1025"
-       id="radialGradient1019"
-       cx="37.041695"
-       cy="84.666656"
-       fx="37.041695"
-       fy="84.666656"
-       r="10.583333"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(2.60166e-7,0.99999982,-1,-1.1423277e-6,121.70832,47.625073)" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient1025">
-      <stop
-         style="stop-color:#f6ffd5;stop-opacity:1"
-         offset="0"
-         id="stop1021" />
-      <stop
-         style="stop-color:#668000;stop-opacity:1"
-         offset="1"
-         id="stop1023" />
-    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient1137"
@@ -118,6 +95,29 @@
          offset="1"
          id="stop1135" />
     </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1025"
+       id="radialGradient1019"
+       cx="37.041695"
+       cy="84.666656"
+       fx="37.041695"
+       fy="84.666656"
+       r="10.583333"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.60166e-7,0.99999982,-1,-1.1423277e-6,122.42231,87.277298)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1025">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0"
+         id="stop1021" />
+      <stop
+         style="stop-color:#666666;stop-opacity:1"
+         offset="1"
+         id="stop1023" />
+    </linearGradient>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -130,7 +130,7 @@
      inkscape:cx="-11.869292"
      inkscape:cy="85.105351"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="g859"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1267"
@@ -175,18 +175,13 @@
     <g
        id="g859"
        transform="translate(52.916662)">
-      <g
-         id="g859-8"
-         transform="translate(0.71399,39.652225)"
-         style="display:inline;fill:#ffffff">
-        <ellipse
-           style="fill:url(#radialGradient1019);fill-opacity:1;stroke-width:0.264583"
-           id="path835"
-           cx="37.041668"
-           cy="84.666664"
-           rx="10.583"
-           ry="10.583333" />
-      </g>
+      <ellipse
+         style="display:inline;fill:url(#radialGradient1019);fill-opacity:1;stroke-width:0.264583"
+         id="path835"
+         cx="37.755657"
+         cy="124.31889"
+         rx="10.583"
+         ry="10.583333" />
       <rect
          style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.264583"
          id="rect928"

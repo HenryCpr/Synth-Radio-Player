@@ -11,6 +11,7 @@
  <script src="jquery-3.5.1.min.js"></script> 
   <script src="jquery-ui.min.js"></script>
     <script src="audioMotion-analyzer.js"></script>
+    <script src="tinycolor-min.js"></script>
 </head>
 
 <body>
@@ -65,14 +66,14 @@ html {
 	 margin: 0 auto;
 	 margin-top: 9px;
 	 height: 5px;
-	 width: 200px;
+	 width: 100px;
 	 right: 0;
 	 background: #000;
 	 border-radius: 15px;
 }
  #volume .ui-slider-range-min {
 	 height: 5px;
-	 width: 300px;
+	 width: 200px;
 	 position: absolute;
 	 border: none;
 	 border-radius: 10px;
@@ -106,12 +107,12 @@ html {
   filter: drop-shadow(0 0 5px #fff);
   }
   #play {
-  -webkit-filter: drop-shadow(0 0 5px #ccf15a);
-  filter: drop-shadow(0 0 5px #ccf15a);
+  -webkit-filter: drop-shadow(0 0 5px #fff);
+  filter: drop-shadow(0 0 5px #fff);
   }
   #stop {
-  -webkit-filter: drop-shadow(0 0 5px #ccf15a);
-  filter: drop-shadow(0 0 5px #ccf15a);
+  -webkit-filter: drop-shadow(0 0 5px #fff);
+  filter: drop-shadow(0 0 5px #fff);
   }  
   
   
@@ -157,7 +158,7 @@ select {
 </head>
 <body onload="loadcheck();">
     <script>
-
+var defaultcolor = "";
 function getLocalStorage (key) {
   return localStorage.getItem(key);
 }
@@ -169,7 +170,7 @@ function setLocalStorage (key, value) {
 function internal_get_theme_mode () {
   var mode = getLocalStorage("currentmode");
   if (mode === null) {  // first time
-    mode = "viz";
+    mode = "ff0000";
   }
   return mode;
 }
@@ -181,36 +182,14 @@ function internal_set_theme_mode (mode) {
 function loadcheck()
 {
   var check = internal_get_theme_mode();
-
-  if (check == "noviz")
-  {
-
-   $("#metaboxz").hide();
-  }
-  if (check == "viz")
-  {
-  
-   $("#metaboxz").show();
-
-  }
+  defaultcolor = check;
+  $('#metadata').css('color', defaultcolor);
+  $("#volume .ui-slider-range-min" ).css( "background-color", defaultcolor);
+  $("#selectstation").css("background-color", defaultcolor);
 }
 
-function checkviz()
-{
-  var check = internal_get_theme_mode();
 
-  if (check == "noviz")
-  {
-  internal_set_theme_mode("viz");
-   $("#metaboxz").show();
-  }
-  if (check == "viz")
-{
-   $("#metaboxz").hide();
-  internal_set_theme_mode("noviz");
-  }
 
-}
     // THE VARIABLE BELOW IS GLOBAL
     let audioMotion;
     let onMetadata;
@@ -281,7 +260,12 @@ function checkviz()
       <button id="play" style=
       "margin: 2px;float: left;outline:none;background-color: Transparent;border:0;background-image:url(playbutton.svg);background-size:32px 32px;padding:2px;width:32px;height:32px;cursor:pointer;">
       </button>
-      <div style="background:linear-gradient(#333,#555);width:240px;height:28px;position:absolute;left:0;right:0;margin:0 auto;border-radius:3px;border: 2px solid #333;margin-top:4px;">
+	  
+      <div style="background:linear-gradient(#333,#555);width:140px;height:28px;position:absolute;left:50;margin:0 auto;border-radius:3px;border: 2px solid #333;margin-top:4px;"> <input class="rainbow" type="range" min="0" max="360" />
+	  </div>	  
+	  
+	  
+      <div style="background:linear-gradient(#333,#555);width:140px;height:28px;position:absolute;right:50;margin:0 auto;border-radius:3px;border: 2px solid #333;margin-top:4px;">
 	  <div id="volume"></div></div>
 	  <!--
 	  <span style=
@@ -829,7 +813,7 @@ $("#volume").slider({
   	max: 100,
   	value: 25,
 		range: "min",
-    change: refreshSwatch,
+    //change: refreshSwatch,
   	slide: function(event, ui) {
     	setVolume(ui.value / 100);
   	}, 
@@ -840,8 +824,83 @@ $("#volume").slider({
 	function setVolume(myVolume) {
     var myMedia = audioMotion;
     myMedia.volume = myVolume;
-	refreshSwatch();
+	//refreshSwatch();
 	}
-	refreshSwatch();
+	//refreshSwatch();
 	   $("#metaboxz").show();
   </script></div>
+  
+  
+  <!-- RGB -->
+<script>
+var css = document.createElement('style');
+document.body.appendChild(css);
+
+
+function updateThumbColor(hue) {
+    var hslcolor = "hsl(" + hue + ", 100%, 50%)";
+	hslchanger = hslcolor;
+	css.textContent = ".rainbow::-webkit-slider-thumb { background: " + hslcolor + "; }";
+    var tc = new tinycolor(hslcolor);
+	$('#metadata').css('color',tc.toHex());
+	$( "#volume .ui-slider-range-min" ).css( "background-color", tc.toHex() );
+	$("#selectstation").css("background-color", tc.toHex());
+    internal_set_theme_mode(tc.toHex());
+}
+//updateThumbColor(180);
+
+$('.rainbow').on('input change', function() {
+    updateThumbColor(this.value);
+});
+
+
+loadcheck();
+</script>
+<style>
+.center {
+    text-align:center;
+    width: 300px;
+    height: 200px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin:auto;
+}
+
+.rainbow {
+    margin-top: 9px;
+    width: 100px;
+    height: 5px;
+}
+
+.rainbow::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #666;
+  border-radius: 10px;
+  border: 0px solid #000101;
+}
+.rainbow {
+    -webkit-appearance: none;
+	}
+.rainbow::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 0px;
+  width: 0px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5.5px;
+  background-color: #000;
+  color: #000;
+}
+
+</style>
+<!--
+<div class="center">
+    <input class="rainbow" type="range" min="0" max="360" />
+    <div>Picked color is #<span id="pick"></span></div>
+<div>
+-->

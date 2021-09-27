@@ -15,7 +15,8 @@ const TAU     = 2 * Math.PI,
 	  RPM     = TAU / 3600,           // angle increment per frame for one revolution per minute @60fps
 	  ROOT24  = 2 ** ( 1 / 24 ),      // 24th root of 2
 	  C0      = 440 * ROOT24 ** -114; // ~16.35 Hz
-
+	  
+var hslchanger = 'hsl( 0, 0%, 100% )';
 class AudioMotionAnalyzer {
 
 /**
@@ -39,7 +40,7 @@ class AudioMotionAnalyzer {
 				'hsl( 0, 0%, 100% )',
 		
 				//	'hsl( 29, 100%, 50% )',
-					'hsl( 75, 84%, 65% )',
+					hslchanger,
 				]
 			},
 			prism:   {
