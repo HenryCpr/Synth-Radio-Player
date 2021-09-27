@@ -857,44 +857,17 @@ $('.rainbow').on('input change', function() {
 loadcheck();
 </script>
 <style>
-.center {
-    text-align:center;
-    width: 300px;
-    height: 200px;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    margin:auto;
+/* FireFox */
+@supports (-moz-appearance:none) {
+    .rainbow { outline:none;width: 100px; margin-top: -3px; }
+    .rainbow::-moz-range-progress { height:30px; background:transparent; }
+    .rainbow::-moz-range-track { height:30px; background:transparent; } /* high value color */
+    .rainbow::-moz-range-thumb { border: none; width:30px; height:30px; border-radius:15px; background:url(colorbutton.svg); background-size: 30px 30px;}
 }
-
-.rainbow {
-    margin-top: 9px;
-    width: 100px;
-    height: 5px;
-}
-
-.rainbow::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  background: #666;
-  border-radius: 10px;
-  border: 0px solid #000101;
-}
-.rainbow {
-    -webkit-appearance: none;
-	}
-.rainbow::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 0px;
-  width: 0px;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -5.5px;
-  background-color: #000;
-  color: #000;
+/* Chrome */
+@supports (-webkit-appearance:none) {
+    .rainbow { -webkit-appearance:none; margin-top: -3px; width: 100px; background:transparent; height:30px;border-radius:15px; overflow:hidden; outline:none; }  /* high value color */
+    .rainbow::-webkit-slider-thumb { -webkit-appearance:none; width:30px; height:30px; border-radius:15px;  background:url(colorbutton.svg); background-size: 30px 30px;border: none;}
 }
 
 </style>
