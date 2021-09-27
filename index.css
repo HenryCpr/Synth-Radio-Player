@@ -99,13 +99,13 @@
 .arrow::before {
   left: -5px;
   transform: rotate(45deg);
-  background-color: #394a6d;
+  background-color:  #ccf15a;
 }
 
 .arrow::after {
   left: 5px;
   transform: rotate(-45deg);
-  background-color: #394a6d;
+  background-color:  #ccf15a;
 }
 
 .open .arrow::before {
