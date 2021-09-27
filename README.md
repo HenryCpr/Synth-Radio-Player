@@ -3,7 +3,7 @@ iRadio (Minimal JavaScript Internet Radio Player) with Visualization and Metadat
 
 Live Demo: http://electrolex.myartsonline.com
 
-![default](https://user-images.githubusercontent.com/16135535/134987892-eacb9dcf-b1d7-44f2-9242-4d81def8fe7e.png)<br><br>
+![rgb](https://user-images.githubusercontent.com/16135535/134996635-ca98889b-90b6-446d-8586-019b8448419e.png)<br><br>
 
 -Add unlimited number of stations (default: 9)<br><br>
 -Play/Stop buttons<br><br>
