@@ -16,7 +16,6 @@ const TAU     = 2 * Math.PI,
 	  ROOT24  = 2 ** ( 1 / 24 ),      // 24th root of 2
 	  C0      = 440 * ROOT24 ** -114; // ~16.35 Hz
 	  
-var hslchanger = 'hsl( 0, 0%, 100% )';
 class AudioMotionAnalyzer {
 
 /**
@@ -34,13 +33,13 @@ class AudioMotionAnalyzer {
 
 		this._gradients = {
 			classic: {
-				bgColor: '#000',
+				bgColor: 'transparent',
 				colorStops: [
 				 // 'hsl( 0, 100%, 50% )',
-				'hsl( 0, 0%, 100% )',
+				'hsl( 0, 0%, 0% )',
 		
 				//	'hsl( 29, 100%, 50% )',
-					hslchanger,
+				'hsl( 0, 0%, 0% )',
 				]
 			},
 			prism:   {
@@ -1746,7 +1745,7 @@ class AudioMotionAnalyzer {
 			gradient     : 'classic',
 			minDecibels  : -85,
 			maxDecibels  : -25,
-			showBgColor  : true,
+			showBgColor  : false,
 			showLeds     : false,
 			showScaleX   : false,
 			showScaleY   : false,
@@ -1761,8 +1760,8 @@ class AudioMotionAnalyzer {
 			lineWidth    : 0,
 			fillAlpha    : 1,
 			barSpace     : 0.1,
-			overlay      : false,
-			bgAlpha      : 0.7,
+			overlay      : true,
+			bgAlpha      : 0.5,
 			radial		 : false,
 			spinSpeed    : 0,
 			stereo       : false,
