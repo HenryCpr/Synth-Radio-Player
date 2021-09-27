@@ -53,13 +53,59 @@
        gradientTransform="matrix(0.23258632,0,0,1,69.749242,39.652228)" />
     <linearGradient
        inkscape:collect="always"
+       xlink:href="#linearGradient1072"
+       id="linearGradient1074"
+       x1="62.362217"
+       y1="11.889763"
+       x2="62.362217"
+       y2="111.88976"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="scale(0.26458333)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1072">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop1068" />
+      <stop
+         style="stop-color:#666666;stop-opacity:1"
+         offset="1"
+         id="stop1070" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1025"
+       id="radialGradient1019"
+       cx="37.041695"
+       cy="84.666656"
+       fx="37.041695"
+       fy="84.666656"
+       r="10.583333"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.60166e-7,0.99999982,-1,-1.1423277e-6,121.70832,47.625073)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1025">
+      <stop
+         style="stop-color:#f6ffd5;stop-opacity:1"
+         offset="0"
+         id="stop1021" />
+      <stop
+         style="stop-color:#668000;stop-opacity:1"
+         offset="1"
+         id="stop1023" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
        xlink:href="#linearGradient1137"
        id="linearGradient1139"
        x1="16.346714"
        y1="1.1279997"
        x2="16.390364"
        y2="12.461457"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83497813,0,0,1.1495217,2.4848267,4.8932937)" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient1137">
@@ -128,12 +174,18 @@
     <g
        id="g859"
        transform="translate(52.916662)">
-      <circle
-         style="fill:#ffffff;stroke-width:0.264583"
-         id="path835-6"
-         cx="37.755657"
-         cy="124.31889"
-         r="10.583333" />
+      <g
+         id="g859-8"
+         transform="translate(0.71399,39.652225)"
+         style="display:inline;fill:#ffffff">
+        <ellipse
+           style="fill:url(#radialGradient1019);fill-opacity:1;stroke-width:0.264583"
+           id="path835"
+           cx="37.041668"
+           cy="84.666664"
+           rx="10.583"
+           ry="10.583333" />
+      </g>
       <rect
          style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.264583"
          id="rect928"
@@ -146,17 +198,28 @@
   </g>
   <g
      inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 3"
+     sodipodi:insensitive="true"
+     style="display:inline">
+    <path
+       id="rect914"
+       style="display:inline;fill:url(#linearGradient1074);fill-opacity:1;stroke:none;stroke-width:111;stroke-linecap:round;stroke-linejoin:round"
+       d="m 16.499768,3.0783651 c -7.3663493,0 -13.296346,5.9305134 -13.296346,13.2968629 0,7.366349 5.9299967,13.296345 13.296346,13.296345 7.366349,0 13.296863,-5.929996 13.296863,-13.296345 0,-7.3663495 -5.930514,-13.2968629 -13.296863,-13.2968629 z m 0,2.7135294 A 10.583333,10.583333 0 0 1 27.083102,16.375228 10.583333,10.583333 0 0 1 16.499768,26.95856 10.583333,10.583333 0 0 1 5.9164346,16.375228 10.583333,10.583333 0 0 1 16.499768,5.7918945 Z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Layer 2"
-     sodipodi:insensitive="true"
      transform="translate(0.5000005,0.49999657)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <ellipse
-       style="fill:url(#linearGradient1139);fill-opacity:1;stroke:none;stroke-width:0.394115"
+       style="display:inline;mix-blend-mode:overlay;fill:url(#linearGradient1139);fill-opacity:1;stroke:none;stroke-width:0.394117"
        id="path303"
-       cx="16.18626"
-       cy="8.3861122"
-       rx="10.932304"
-       ry="7.1499882" />
+       cx="16"
+       cy="14.533312"
+       rx="9.1282349"
+       ry="8.2190657" />
   </g>
 </svg>
