@@ -836,7 +836,8 @@ startAni();
 var ultistring = "";
 var stringArray;
 var xxx = '';
-function startmeup() {
+var starmeup = window.setInterval(function(){
+  /// call your function here {
 var j = 0;
 stringArray = ultistring.split(" ");  
 stringArray.push("Now Playing");
@@ -853,14 +854,13 @@ j++;
   
   }
   
-  
-setTimeout(function() { 
-startmeup();
-
-   }, 30000); 
 
 };
 
+}, 20000);
+To stop the loop you can use
+
+//clearInterval(intervalId); 
 
 </script>
 
