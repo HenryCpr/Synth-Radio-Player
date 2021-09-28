@@ -317,7 +317,7 @@ function loadcheck()
     onMetadataFailed = (metadata) => {
         
         ultistring = "Unable to get metadata";
-        startmeup();
+        ();
       }; 
     
 
@@ -359,7 +359,7 @@ function loadcheck()
                 player12.stop();
                 player13.stop();
                	ultistring = "Stopped";
-               	startmeup();
+               	();
                	
 	}
 
@@ -463,7 +463,7 @@ function loadcheck()
                 stopallplayers();
            onMetadata = (metadata) => {
       ultistring = metadata.TITLE;
-      startmeup();
+      ();
     
     };
 
@@ -485,7 +485,7 @@ function loadcheck()
                 stopallplayers();
            onMetadata = (metadata) => {
       ultistring = metadata.TITLE;
-      startmeup();
+      ();
            };
     
       
@@ -496,7 +496,7 @@ function loadcheck()
                  
                   onMetadataFailed("ogg") = (metadata) => {
                    ultistring = "CORS Error Unable to get metadata";   
-                   startmeup();
+                   ();
 				  };				   
             
             
@@ -514,7 +514,7 @@ function loadcheck()
                 stopallplayers();
            onMetadata = (metadata) => {
     ultistring =  metadata.StreamTitle;
-startmeup();
+();
     };
 
         player3 = new IcecastMetadataPlayer("http://eu1.reliastream.com:7017/MDR", { onMetadata, });
@@ -523,7 +523,7 @@ startmeup();
                 
                        onMetadataFailed("icy") = (metadata) => {
                    ultistring = "CORS Error Unable to get metadata";  
-                   startmeup();
+                   ();
 				  };		
         
     } 
@@ -534,7 +534,7 @@ startmeup();
                 stopallplayers();
            onMetadata = (metadata) => {
          ultistring = metadata.TITLE;
-           startmeup();
+           ();
     };
 
         player4 = new IcecastMetadataPlayer("http://94.130.113.214:8000/chill", { onMetadata,  metadataTypes: ("icy" ,"ogg"), codec: "vorbis",});
@@ -543,7 +543,7 @@ startmeup();
 		
 		                  onMetadataFailed("ogg") = (metadata) => {
                    ultistring = "CORS Error Unable to get metadata";   
-                  startmeup();
+                  ();
 				  };		
         
     } 
@@ -554,7 +554,7 @@ startmeup();
                 stopallplayers();
            onMetadata = (metadata) => {
          ultistring = metadata.TITLE;
-           startmeup();
+           ();
     };
 
         player5 = new IcecastMetadataPlayer("https://media-ssl.musicradio.com/ClassicFM", { onMetadata,  metadataTypes:  ("icy" ,"ogg"), codec: "vorbis",});
@@ -563,7 +563,7 @@ startmeup();
 		
 		                  onMetadataFailed("ogg") = (metadata) => {
                       ultistring = "CORS Error Unable to get metadata";   
-                        startmeup();
+                        ();
 				  };		
         
     }
@@ -574,7 +574,7 @@ startmeup();
                 stopallplayers();
            onMetadata = (metadata) => {
       ultistring = metadata.TITLE;
-        startmeup();
+        ();
     };
 
         player6 = new IcecastMetadataPlayer("http://ibizaglobalradio.streaming-pro.com:8024/;", { onMetadata,  metadataTypes: ("icy" ,"ogg"), codec: "vorbis",});
@@ -583,7 +583,7 @@ startmeup();
 				
 				                  onMetadataFailed("ogg") = (metadata) => {
                    ultistring = "CORS Error Unable to get metadata";   
-                     startmeup();
+                     ();
 				  };		
         
     }   
@@ -593,7 +593,7 @@ startmeup();
                 stopallplayers();
            onMetadata = (metadata) => {
       ultistring =  metadata.StreamTitle;
-        startmeup();
+        ();
     };
 
         player7 = new IcecastMetadataPlayer("https://kathy.torontocast.com:1825/stream", { onMetadata, metadataTypes: ("icy","ogg"), });
@@ -602,7 +602,7 @@ startmeup();
 		
 		                  onMetadataFailed("icy") = (metadata) => {
                    ultistring = "CORS Error Unable to get metadata";  
-                     startmeup();
+                     ();
 				  };		
         
     }   
@@ -613,7 +613,7 @@ startmeup();
                 stopallplayers();
            onMetadata = (metadata) => {
       ultistring = metadata.TITLE;
-        startmeup();
+        ();
     };
 
         player8 = new IcecastMetadataPlayer("http://kathy.torontocast.com:1820/stream", { onMetadata, metadataTypes: "ogg", });
@@ -622,7 +622,7 @@ startmeup();
 				
 		                  onMetadataFailed("ogg") = (metadata) => {
                  ultistring  = "CORS Error Unable to get metadata";   
-                   startmeup();
+                   ();
 				  };		
         
     }   
@@ -632,7 +632,7 @@ startmeup();
                  stopallplayers();
            onMetadata = (metadata) => {
       ultistring =  metadata.StreamTitle;
-        startmeup();
+        ();
     };
 
         player9 = new IcecastMetadataPlayer("http://s4.citrus3.com:8232/stream.mp3", { onMetadata,  metadataTypes: ("icy" ,"ogg"), });
@@ -641,7 +641,7 @@ startmeup();
 				
 		                  onMetadataFailed("icy") = (metadata) => {
                      ultistring = "CORS Error Unable to get metadata";   
-                       startmeup();
+                       ();
 				  };		
         
     }   
@@ -651,7 +651,7 @@ startmeup();
                  stopallplayers();
            onMetadata = (metadata) => {
     ultistring = metadata.StreamTitle;
-      startmeup();
+      ();
     };
 
         player10 = new IcecastMetadataPlayer("https://22343.live.streamtheworld.com/SER_MALLORCA.mp3", { onMetadata, metadataTypes: ("icy", "ogg"),});
@@ -660,7 +660,7 @@ startmeup();
 				
 		                  onMetadataFailed("icy") = (metadata) => {
                    ultistring = "CORS Error Unable to get metadata";  
-                     startmeup();
+                     ();
 				  };		
         
     }        
@@ -669,7 +669,7 @@ startmeup();
                  stopallplayers();
            onMetadata = (metadata) => {
       ultistring = metadata.StreamTitle;
-        startmeup();
+        ();
     };
 
         player11 = new IcecastMetadataPlayer("https://wecast-m02-04.flumotion.com/copesedes/mallorca.mp3", { onMetadata, metadataTypes: ("icy", "ogg"), });
@@ -678,7 +678,7 @@ startmeup();
 				
 		                  onMetadataFailed("icy") = (metadata) => {
                    ultistring = "CORS Error Unable to get metadata";   
-                     startmeup();
+                     ();
 				  };		
         
     }   
@@ -690,7 +690,7 @@ startmeup();
                  stopallplayers();
            onMetadata = (metadata) => {
       ultistring = metadata.StreamTitle;
-        startmeup();
+        ();
     };
 
         player12 = new IcecastMetadataPlayer("https://streamingv2.shoutcast.com/Jazz4ever", { onMetadata, });
@@ -699,7 +699,7 @@ startmeup();
 		
 		                  onMetadataFailed("icy") = (metadata) => {
           ultistring = "CORS Error Unable to get metadata";   
-            startmeup();
+            ();
 				  };		
         
     }   
@@ -709,7 +709,7 @@ startmeup();
                  stopallplayers();
            onMetadata = (metadata) => {
       ultistring = metadata.StreamTitle;
-        startmeup();
+        ();
     };
 
         player13 = new IcecastMetadataPlayer("http://stream.dancewave.online:8080/dance.mp3", { onMetadata, });
@@ -718,7 +718,7 @@ startmeup();
 				
 		                  onMetadataFailed("icy") = (metadata) => {
                    ultistring = "CORS Error Unable to get metadata";   
-                     startmeup();
+                     ();
 				  };		
 				  
 				  
@@ -732,7 +732,7 @@ startmeup();
     onMetadataFailed = (metadata) => {
         
         ultistring = "Unable to get metadata";
-        startmeup();
+        ();
       }; 
     
         } );
@@ -773,7 +773,7 @@ startmeup();
 var ultistring = "";
 var stringArray;
 var xxx = '';
-function startmeup() {
+function () {
 var j = 0;
 stringArray = ultistring.split(" ");  
 stringArray.push("Now Playing");
@@ -792,7 +792,7 @@ j++;
   
   
 setTimeout(function() { 
-startmeup();
+();
 
    }, 30000); 
 
