@@ -33,13 +33,17 @@ class AudioMotionAnalyzer {
 
 		this._gradients = {
 			classic: {
-				bgColor: 'transparent',
+				bgColor: '#000',
+				dir: 'v',
 				colorStops: [
 				 // 'hsl( 0, 100%, 50% )',
-				'hsl( 0, 0%, 0% )',
-		
-				//	'hsl( 29, 100%, 50% )',
-				'hsl( 0, 0%, 0% )',
+			
+	        'hsl( 0, 0%, 100% )',
+					'hsl( 0, 0%, 100% )',
+					
+	 
+	     
+
 				]
 			},
 			prism:   {
@@ -1737,16 +1741,16 @@ class AudioMotionAnalyzer {
 		
 		// settings defaults
 		const defaults = {
-			mode         : 6,
+			mode         : 5,
 			fftSize      : 8192,
 			minFreq      : 20,
 			maxFreq      : 22000,
-			smoothing    : 0.5,
+			smoothing    : 0,
 			gradient     : 'classic',
 			minDecibels  : -85,
 			maxDecibels  : -25,
-			showBgColor  : false,
-			showLeds     : false,
+			showBgColor  : true,
+			showLeds     : true,
 			showScaleX   : false,
 			showScaleY   : false,
 			showPeaks    : true,
@@ -1760,12 +1764,12 @@ class AudioMotionAnalyzer {
 			lineWidth    : 0,
 			fillAlpha    : 1,
 			barSpace     : 0.1,
-			overlay      : true,
+			overlay      : false,
 			bgAlpha      : 0.5,
 			radial		 : false,
 			spinSpeed    : 0,
 			stereo       : false,
-			splitGradient: false,
+			splitGradient: true,
 			start        : true,
 			volume       : 1,
 			mirror       : -1

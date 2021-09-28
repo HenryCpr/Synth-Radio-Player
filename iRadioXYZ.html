@@ -60,11 +60,11 @@ html {
     color: #777;
     text-decoration: none;
  }
- #volume {
+#volume {
 	 position:absolute;
 	 left: 0;
 	 margin: 0 auto;
-	 margin-top: 9px;
+	 margin-top: 2.3px;
 	 height: 5px;
 	 width: 100px;
 	 right: 0;
@@ -159,6 +159,7 @@ select {
 <body onload="loadcheck();">
     <script>
 var defaultcolor = "";
+var hslchanger = "";
 function getLocalStorage (key) {
   return localStorage.getItem(key);
 }
@@ -183,9 +184,11 @@ function loadcheck()
 {
   var check = internal_get_theme_mode();
   defaultcolor = check;
+  var newbie = "#" + defaultcolor.toString();
+  hslchanger = newbie.toHslString(); 
   $('#metadata').css('color', defaultcolor);
   $("#volume .ui-slider-range-min" ).css( "background-color", defaultcolor);
-  $("#selectstation").css("background-color", defaultcolor);
+
 }
 
 
@@ -210,10 +213,10 @@ function loadcheck()
 	let player12;
 	let player13;
     </script> 
-	<div style="width:100%;height:160px;left:0;right:0;top: 0px;position:absolute;padding:0;margin: 0;margin-top: 5px;">
-	<div style="max-width:416px;left:0;top: 0;margin: 0 auto;height: 138px;opacity:1;">
+	<div style="width:100%;height:160px;left:0;right:0;top: 64px;position:absolute;padding:0;margin: 0;background:#fff;">
+	<div style="max-width:416px;left:0;top: 0;margin: 0 auto;height: 138px;opacity:1;background:#fff;">
 	
-	<div class="shadowz" style="background-color:#111;height:32px;width:32px;cursor:pointer;">
+	<div class="shadowz" style="background:#fff;height:32px;width:32px;cursor:pointer;">
       <div style="position:relative:width:416px;height:32px;float:left;">
        <div class="container" style="float:left;">
         <div class="custom-select-wrapper" style="float:left;">
@@ -230,7 +233,7 @@ function loadcheck()
                       <span class="custom-option" data-value="5" onclick="getStation(5)">Classic FM</span>
                        <span class="custom-option" data-value="6" onclick="getStation(6)">Ibiza Global Radio</span>
                         <span class="custom-option" data-value="7" onclick="getStation(7)">Cinemix</span>
-                         <span class="custom-option" data-value="9" onclick="getStation(9)">J-Pop Project Radio</span>
+                         <span class="custom-option" data-value="9" onclick="getStation(9)">Aftermath FM</span>
                         <span class="custom-option" data-value="10" onclick="getStation(10)">Cadena Ser Mallorca</span>
                        <span class="custom-option" data-value="11" onclick="getStation(11)">Cadena Cope Mallorca</span>
                        <span class="custom-option" data-value="12" onclick="getStation(12)">Jazz4ever</span>
@@ -239,21 +242,25 @@ function loadcheck()
             </div>
         </div>
     </div>
-    <div id="selectstation" class="box" style="position:absolute;width:416px;height:32px;z-index:9999999;"></div>
+    <div id="selectstation" class="box" style="position:absolute;width:416px;height:32px;z-index:9999999;background:#fff;"></div>
     </div>
 
     <script type="text/javascript" src="./index.js"></script>
       
       
     </div>
-    <div id="metaboxz">
+  
+    
+      
     <div class="shadowz" id="metabox" class="scroll-box" style=
-    "overflow: hidden;position: relative;background:#000;height: 32px; width:416px;z-index:9999999;">
+    "overflow: hidden;position: relative;background:#000;height: 32px; width:416px;z-index:9999999;text-align:center">
 
       <div id="metadata" class="scroll-text" style=
-      "position:absolute;white-space: nowrap;height:32px;line-height:32px;font-size:16px;font-family:digital;color:	#ccf15a;text-shadow: 0 0 5px #fff;z-index:9999999999;">
-      </div>
-    </div>
+      "text-align:center;position:relative;white-space: nowrap;height:32px;line-height:32px;font-size:16px;font-family:digital;color:	#ccf15a;z-index:9999999999;">
+     </div>
+     
+     </div>
+
   
     <div class="shadowz" id="controls" style=
     "position:absolute;text-align:center;width:416px;height:40px;margin:0 auto;right:0;left:0;background-image:url(carbon_matte.png);background-repeat:repeat;border-radius:0 0 5px 5px;border:2px solid #000;">
@@ -261,11 +268,11 @@ function loadcheck()
       "margin: 2px;float: left;outline:none;background-color: Transparent;border:0;background-image:url(playbutton.svg);background-size:32px 32px;padding:2px;width:32px;height:32px;cursor:pointer;">
       </button>
 	  
-      <div style="background:linear-gradient(#333,#555);width:140px;height:28px;position:absolute;left:50;margin:0 auto;border-radius:3px;border: 2px solid #333;margin-top:4px;"> <input class="rainbow" type="range" min="0" max="360" />
+      <div style="background:#000;width:140px;height:14px;position:absolute;left:50;margin:0 auto;border-radius:30px;border: 2px solid #333;margin-top:11px;"> <input id="rainbow" class="rainbow" type="range" min="0" max="360" />
 	  </div>	  
 	  
 	  
-      <div style="background:linear-gradient(#333,#555);width:140px;height:28px;position:absolute;right:50;margin:0 auto;border-radius:3px;border: 2px solid #333;margin-top:4px;">
+      <div style="background:#000;width:140px;height:14px;position:absolute;right:50;margin:0 auto;border-radius:30px;border: 2px solid #333;margin-top:11px;">
 	  <div id="volume"></div></div>
 	  <!--
 	  <span style=
@@ -277,12 +284,14 @@ function loadcheck()
 	  <button id="stop" style=
       "margin:2px;float:right;outline:none;background-color: Transparent;width:32px;border:0;background-image:url(stopbutton.svg);background-size:32px 32px;padding: 2px;height:32px;cursor:pointer;"></button>
     </div>
-	</div></div>
+	</div>
 
-   
 
     <script src="icecast-metadata-player-1.1.1.min.js"></script> 
     <script>
+
+
+	
 
 
 	
@@ -297,11 +306,6 @@ function loadcheck()
         
   //  import AudioMotionAnalyzer from './audioMotion-analyzer.js';
 
-onMetadataFailed = (metadata) => {
-        
-        document.getElementById("metadata").innerHTML = "Now Playing: Unable to get metadata...";
-        
-      }; 
 
 
     onMetadata = (metadata) => {
@@ -310,8 +314,11 @@ onMetadataFailed = (metadata) => {
     
     
 
-  
-    
+    onMetadataFailed = (metadata) => {
+        
+        ultistring = "Unable to get metadata";
+        startmeup();
+      }; 
     
 
 
@@ -326,7 +333,7 @@ onMetadataFailed = (metadata) => {
     player6 = new IcecastMetadataPlayer("http://ibizaglobalradio.streaming-pro.com:8024/", { onMetadata, metadataTypes: ("icy" ,"ogg"),  codec: "vorbis"});
     player7 = new IcecastMetadataPlayer("https://kathy.torontocast.com:1825/stream", { onMetadata,  metadataTypes: ("icy" ,"ogg"),  codec: "vorbis", });
     player8 = new IcecastMetadataPlayer("http://176.31.107.8:8430/Radio-Electro-Paris", { onMetadata, }) 
-    player9 = new IcecastMetadataPlayer("http://184.75.223.178:8083/stream", { onMetadata, })
+    player9 = new IcecastMetadataPlayer("http://s4.citrus3.com:8232/stream.mp3", { onMetadata, })
     player10 = new IcecastMetadataPlayer("https://22343.live.streamtheworld.com/SER_MALLORCA.mp3", { onMetadata, }) 
     player11 = new IcecastMetadataPlayer("https://wecast-m02-04.flumotion.com/copesedes/mallorca.mp3", { onMetadata, })
    
@@ -351,7 +358,9 @@ onMetadataFailed = (metadata) => {
                 player11.stop();
                 player12.stop();
                 player13.stop();
-               	document.getElementById("metadata").innerText = "Now Playing:";
+               	ultistring = "Stopped";
+               	startmeup();
+               	
 	}
 
    
@@ -447,22 +456,26 @@ onMetadataFailed = (metadata) => {
     document.getElementById('play').addEventListener( 'click', () => {
 
 
-
+   
+	
     if (tracking == 1)
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.TITLE;
+      ultistring = metadata.TITLE;
+      startmeup();
+    
     };
 
         player1 = new IcecastMetadataPlayer("http://stream.nightride.fm/nightride.ogg", { onMetadata, metadataTypes:"ogg", codec: "vorbis" });          
                 audioMotion.connectInput( player1.audioElement );
                 player1.play();
-		
+		       
 		                  onMetadataFailed("ogg") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                   ultistring = "CORS Error Unable to get metadata"; 
+                
 				  };		
-              
+                
             
     }
 
@@ -471,17 +484,19 @@ onMetadataFailed = (metadata) => {
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.TITLE;
-      
+      ultistring = metadata.TITLE;
+      startmeup();
            };
     
       
         player2 = new IcecastMetadataPlayer("https://s4.radio.co/s0e01ae4e1/low", { onMetadata,  metadataTypes: ("icy" ,"ogg"),  codec: "vorbis" });
                 audioMotion.connectInput( player2.audioElement );
                 player2.play();
+			
                  
                   onMetadataFailed("ogg") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                   ultistring = "CORS Error Unable to get metadata";   
+                   startmeup();
 				  };				   
             
             
@@ -498,7 +513,8 @@ onMetadataFailed = (metadata) => {
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.StreamTitle;
+    ultistring =  metadata.StreamTitle;
+startmeup();
     };
 
         player3 = new IcecastMetadataPlayer("http://eu1.reliastream.com:7017/MDR", { onMetadata, });
@@ -506,7 +522,8 @@ onMetadataFailed = (metadata) => {
                 player3.play();
                 
                        onMetadataFailed("icy") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                   ultistring = "CORS Error Unable to get metadata";  
+                   startmeup();
 				  };		
         
     } 
@@ -516,7 +533,8 @@ onMetadataFailed = (metadata) => {
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-         document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.TITLE;
+         ultistring = metadata.TITLE;
+           startmeup();
     };
 
         player4 = new IcecastMetadataPlayer("http://94.130.113.214:8000/chill", { onMetadata,  metadataTypes: ("icy" ,"ogg"), codec: "vorbis",});
@@ -524,7 +542,8 @@ onMetadataFailed = (metadata) => {
                 player4.play();
 		
 		                  onMetadataFailed("ogg") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                   ultistring = "CORS Error Unable to get metadata";   
+                  startmeup();
 				  };		
         
     } 
@@ -534,7 +553,8 @@ onMetadataFailed = (metadata) => {
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-         document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.TITLE;
+         ultistring = metadata.TITLE;
+           startmeup();
     };
 
         player5 = new IcecastMetadataPlayer("https://media-ssl.musicradio.com/ClassicFM", { onMetadata,  metadataTypes:  ("icy" ,"ogg"), codec: "vorbis",});
@@ -542,7 +562,8 @@ onMetadataFailed = (metadata) => {
                 player5.play();
 		
 		                  onMetadataFailed("ogg") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                      ultistring = "CORS Error Unable to get metadata";   
+                        startmeup();
 				  };		
         
     }
@@ -552,7 +573,8 @@ onMetadataFailed = (metadata) => {
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.TITLE;
+      ultistring = metadata.TITLE;
+        startmeup();
     };
 
         player6 = new IcecastMetadataPlayer("http://ibizaglobalradio.streaming-pro.com:8024/;", { onMetadata,  metadataTypes: ("icy" ,"ogg"), codec: "vorbis",});
@@ -560,7 +582,8 @@ onMetadataFailed = (metadata) => {
                 player6.play();
 				
 				                  onMetadataFailed("ogg") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                   ultistring = "CORS Error Unable to get metadata";   
+                     startmeup();
 				  };		
         
     }   
@@ -569,7 +592,8 @@ onMetadataFailed = (metadata) => {
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.StreamTitle;
+      ultistring =  metadata.StreamTitle;
+        startmeup();
     };
 
         player7 = new IcecastMetadataPlayer("https://kathy.torontocast.com:1825/stream", { onMetadata, metadataTypes: ("icy","ogg"), });
@@ -577,7 +601,8 @@ onMetadataFailed = (metadata) => {
                 player7.play();
 		
 		                  onMetadataFailed("icy") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                   ultistring = "CORS Error Unable to get metadata";  
+                     startmeup();
 				  };		
         
     }   
@@ -587,15 +612,17 @@ onMetadataFailed = (metadata) => {
     {
                 stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.TITLE;
+      ultistring = metadata.TITLE;
+        startmeup();
     };
 
-        player8 = new IcecastMetadataPlayer("http://176.31.107.8:8430/Radio-Electro-Paris", { onMetadata, metadataTypes: "ogg", });
+        player8 = new IcecastMetadataPlayer("http://kathy.torontocast.com:1820/stream", { onMetadata, metadataTypes: "ogg", });
                 audioMotion.connectInput( player8.audioElement );
                 player8.play();
 				
 		                  onMetadataFailed("ogg") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                 ultistring  = "CORS Error Unable to get metadata";   
+                   startmeup();
 				  };		
         
     }   
@@ -604,15 +631,17 @@ onMetadataFailed = (metadata) => {
     {
                  stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.TITLE;
+      ultistring =  metadata.StreamTitle;
+        startmeup();
     };
 
-        player9 = new IcecastMetadataPlayer("http://184.75.223.178:8083/stream", { onMetadata,  metadataTypes: ("icy" ,"ogg"), });
+        player9 = new IcecastMetadataPlayer("http://s4.citrus3.com:8232/stream.mp3", { onMetadata,  metadataTypes: ("icy" ,"ogg"), });
                 audioMotion.connectInput( player9.audioElement );
                 player9.play();
 				
-		                  onMetadataFailed("ogg") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+		                  onMetadataFailed("icy") = (metadata) => {
+                     ultistring = "CORS Error Unable to get metadata";   
+                       startmeup();
 				  };		
         
     }   
@@ -621,7 +650,8 @@ onMetadataFailed = (metadata) => {
     {
                  stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.StreamTitle;
+    ultistring = metadata.StreamTitle;
+      startmeup();
     };
 
         player10 = new IcecastMetadataPlayer("https://22343.live.streamtheworld.com/SER_MALLORCA.mp3", { onMetadata, metadataTypes: ("icy", "ogg"),});
@@ -629,7 +659,8 @@ onMetadataFailed = (metadata) => {
                 player10.play();
 				
 		                  onMetadataFailed("icy") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                   ultistring = "CORS Error Unable to get metadata";  
+                     startmeup();
 				  };		
         
     }        
@@ -637,7 +668,8 @@ onMetadataFailed = (metadata) => {
     {
                  stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.StreamTitle;
+      ultistring = metadata.StreamTitle;
+        startmeup();
     };
 
         player11 = new IcecastMetadataPlayer("https://wecast-m02-04.flumotion.com/copesedes/mallorca.mp3", { onMetadata, metadataTypes: ("icy", "ogg"), });
@@ -645,7 +677,8 @@ onMetadataFailed = (metadata) => {
                 player11.play();
 				
 		                  onMetadataFailed("icy") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                   ultistring = "CORS Error Unable to get metadata";   
+                     startmeup();
 				  };		
         
     }   
@@ -656,7 +689,8 @@ onMetadataFailed = (metadata) => {
     {
                  stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.StreamTitle;
+      ultistring = metadata.StreamTitle;
+        startmeup();
     };
 
         player12 = new IcecastMetadataPlayer("https://streamingv2.shoutcast.com/Jazz4ever", { onMetadata, });
@@ -664,7 +698,8 @@ onMetadataFailed = (metadata) => {
                 player12.play();
 		
 		                  onMetadataFailed("icy") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+          ultistring = "CORS Error Unable to get metadata";   
+            startmeup();
 				  };		
         
     }   
@@ -673,7 +708,8 @@ onMetadataFailed = (metadata) => {
     {
                  stopallplayers();
            onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = " Now Playing: " + metadata.StreamTitle;
+      ultistring = metadata.StreamTitle;
+        startmeup();
     };
 
         player13 = new IcecastMetadataPlayer("http://stream.dancewave.online:8080/dance.mp3", { onMetadata, });
@@ -681,16 +717,24 @@ onMetadataFailed = (metadata) => {
                 player13.play();
 				
 		                  onMetadataFailed("icy") = (metadata) => {
-                   document.getElementById("metadata").innerHTML = " Now Playing: Unable to get metadata...";   
+                   ultistring = "CORS Error Unable to get metadata";   
+                     startmeup();
 				  };		
+				  
+				  
+				  
+				  
         
     }
+    
+  
+    
+    onMetadataFailed = (metadata) => {
         
-onMetadataFailed = (metadata) => {
-        
-        document.getElementById("metadata").innerHTML = "Now Playing: Unable to get metadata...";
-        
+        ultistring = "Unable to get metadata";
+        startmeup();
       }; 
+    
         } );
         
        
@@ -712,16 +756,53 @@ onMetadataFailed = (metadata) => {
       audioMotion = new AudioMotionAnalyzer( document.getElementById('selectstation'), {
       	  
 					 radial: false,
-           mode: 6,
+           mode: 5,
            showLeds: true,
            showPeaks: true,
     });
+    
+  function task(i) { 
+
+  setTimeout(function() { 
+
+      // Add tasks to do 
+
+  }, 2000 * i); 
+}   
+  
+var ultistring = "";
+var stringArray;
+var xxx = '';
+function startmeup() {
+var j = 0;
+stringArray = ultistring.split(" ");  
+stringArray.push("Now Playing");
+for (xxx = stringArray.length; xxx > 0; xxx--)
+{
+
+   setTimeout(function() { 
+$('.scroll-Text').html(stringArray[j]);
+j++;
+
+   }, 5000 * xxx); 
+   
+   
+  
+  }
+  
+  
+setTimeout(function() { 
+startmeup();
+
+   }, 30000); 
+
+};
 
 
 
     </script> 
 <script>
-  
+ /*
 let animSpeed = 5000;
 	    function startAni() {
 	        var elem = $('.scroll-box');
@@ -741,7 +822,46 @@ let animSpeed = 5000;
 	        }
 $( document ).ready(function() {
 startAni();
-});
+});*/
+
+  function task(i) { 
+
+  setTimeout(function() { 
+
+      // Add tasks to do 
+
+  }, 2000 * i); 
+}   
+  
+var ultistring = "";
+var stringArray;
+var xxx = '';
+function startmeup() {
+var j = 0;
+stringArray = ultistring.split(" ");  
+stringArray.push("Now Playing");
+for (xxx = stringArray.length; xxx > 0; xxx--)
+{
+
+   setTimeout(function() { 
+$('.scroll-Text').html(stringArray[j]);
+j++;
+
+   }, 5000 * xxx); 
+   
+   
+  
+  }
+  
+  
+setTimeout(function() { 
+startmeup();
+
+   }, 30000); 
+
+};
+
+
 </script>
 
   </div>
@@ -769,7 +889,19 @@ startAni();
 </body>
 
 </html>
-	
+
+<script>
+
+autocomplete(document.getElementById("search"), dictionary);
+
+/*
+$( "#expander" ).click(function() {
+  $( "#taco" ).toggle( "fast", function() {
+    // Animation complete.
+  });
+});*/ 
+// $("#taco").toggle();
+</script>		
 
 <script>
 function getTheColor( colorVal ) {
@@ -828,9 +960,25 @@ $("#volume").slider({
 	}
 	//refreshSwatch();
 	   $("#metaboxz").show();
-  </script></div>
+  </script>
   
-  
+  <script  src="./script.js"></script>
+   <script  src="./menuscript.js"></script>
+     <script
+      src="forecast.min.js"
+      defer
+    ></script>
+    
+  <script>
+window.setInterval("reloadIFrame();", 900000);
+function reloadIFrame() {
+ document.getElementById("rss").src="rss.html";
+}
+
+   $("#metaboxz").show();
+
+</script>
+
   <!-- RGB -->
 <script>
 var css = document.createElement('style');
@@ -838,14 +986,26 @@ document.body.appendChild(css);
 
 
 function updateThumbColor(hue) {
+	
     var hslcolor = "hsl(" + hue + ", 100%, 50%)";
 	hslchanger = hslcolor;
 	css.textContent = ".rainbow::-webkit-slider-thumb { background: " + hslcolor + "; }";
     var tc = new tinycolor(hslcolor);
 	$('#metadata').css('color',tc.toHex());
 	$( "#volume .ui-slider-range-min" ).css( "background-color", tc.toHex() );
-	$("#selectstation").css("background-color", tc.toHex());
+	//$("#selectstation").css("background-color", tc.toHex());
     internal_set_theme_mode(tc.toHex());
+audioMotion.registerGradient( 'classic', {
+  bgColor: '#000',
+  colorStops: [
+    'hsl( 0, 0%, 100% )',
+    hslchanger,
+  ]
+});
+audioMotion.gradient = 'classic';
+
+
+
 }
 //updateThumbColor(180);
 
@@ -853,20 +1013,25 @@ $('.rainbow').on('input change', function() {
     updateThumbColor(this.value);
 });
 
+function getHue() {
+	 var currenthue = document.getElementById('rainbow').value; 
+    updateThumbColor(currenthue);	
+}
 
+setTimeout(getHue(), 10000);
 loadcheck();
 </script>
 <style>
 /* FireFox */
 @supports (-moz-appearance:none) {
-    .rainbow { outline:none;width: 100px; margin-top: -3px; }
+    .rainbow { outline:none;width: 100px; margin-top: -10px; }
     .rainbow::-moz-range-progress { height:30px; background:transparent; }
-    .rainbow::-moz-range-track { height:30px; background:transparent; } /* high value color */
+    .rainbow::-moz-range-track { height:30px; background:transparent;border: none; } /* high value color */
     .rainbow::-moz-range-thumb { border: none; width:30px; height:30px; border-radius:15px; background:url(colorbutton.svg); background-size: 30px 30px;}
 }
 /* Chrome */
 @supports (-webkit-appearance:none) {
-    .rainbow { -webkit-appearance:none; margin-top: -3px; width: 100px; background:transparent; height:30px;border-radius:15px; overflow:hidden; outline:none; }  /* high value color */
+    .rainbow { -webkit-appearance:none; margin-top: -10px; width: 100px; background:transparent; height:30px;border:none; overflow:hidden; outline:none; }  /* high value color */
     .rainbow::-webkit-slider-thumb { -webkit-appearance:none; width:30px; height:30px; border-radius:15px;  background:url(colorbutton.svg); background-size: 30px 30px;border: none;}
 }
 
