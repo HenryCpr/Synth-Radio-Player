@@ -3,7 +3,7 @@
 
 Live Demo: http://alext.rf.gd
 
-![meta](https://user-images.githubusercontent.com/16135535/135127247-5e899be1-a050-4912-aacf-2a496337544d.png)<br><br>
+![Screenshot_20220202-091147](https://user-images.githubusercontent.com/16135535/152170774-c26a509d-d792-4119-8832-7a74b4464192.png)<br><br>
 
 -Add unlimited number of stations (default: 9)<br><br>
 -Play/Stop buttons<br><br>
