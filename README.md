@@ -1,7 +1,7 @@
 # Bliss Radio Player
 (Minimal JavaScript Internet Radio Player) with Visualization and Metadata<br><br>
 
-Live Demo: http://alezt.rf.gd
+Live Demo: http://alext.rf.gd
 
 ![meta](https://user-images.githubusercontent.com/16135535/135127247-5e899be1-a050-4912-aacf-2a496337544d.png)<br><br>
 
