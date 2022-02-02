@@ -1,0 +1,115 @@
+.bg {
+  position: absolute;
+  z-index:0;
+  opacity: 1;
+  top: 0px;
+  left: 0;
+  height: 350px;
+  width: 100%;
+  
+ -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
+  mask-mode: alpha;
+  background-color: transparent;
+  overflow: hidden !important;
+  transform: scale(1.4) perspective(400px) rotateX(-55deg) translateZ(-50px)  ;
+  transform-origin: 50% 50%;
+}
+
+#izer {
+  position: absolute;
+  text-align: center;
+  z-index:-1;
+  top: 0;
+  left: 0;
+  right:0;
+  max-height: 200px;
+  width:100%;
+  background-color: transparent;
+  overflow: hidden !important;
+    pointer-events: none;
+    background: transparent;
+    margin:0 auto;
+}
+	
+
+.bg2 {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: 300px;
+  max-width: 1075px;
+  overflow: hidden;
+
+    background-color: transparent;
+  overflow: hidden !important;
+  transform: scale(0.5) perspective(100px) rotateX(-30deg) ;
+  transform-origin: 50% 50%;
+}
+
+.pat {
+  position: absolute;
+  top: -500px;
+  left: -500px;
+  height: calc(100% + 1000px);
+  width: calc(100% + 1000px);
+  background-image: url("frame_orig.png");
+  background-size: 500px 500px;
+  animation: scroll 20s linear infinite;
+}
+
+.pat2 {
+  position: absolute;
+  top: -500px;
+  left: -500px;
+  height: calc(100% + 1000px);
+  width: calc(100% + 1000px);
+  background-image: url("freecloudsx2.png");
+  background-size: 500px 500px;
+  animation: scroll 20s linear infinite;
+}
+
+.pat3 {
+  position: absolute;
+  top: -500px;
+  left: -500px;
+  height: calc(100% + 1000px);
+  width: calc(100% + 1000px);
+  background-image: url("cloud10.png");
+  background-size: 500px 500px;
+  animation: scroll 20s linear infinite;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translate3d(0, 500px, 0);
+  }
+ 
+  
+  100% {
+    transform: translate3d(0 , 0, 0);
+  }
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.content {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+.content .headline {
+  font-family: Impact, sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
