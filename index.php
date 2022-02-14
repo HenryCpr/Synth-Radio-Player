@@ -14,13 +14,19 @@
 <script src="jquery-ui.min.js"></script>
 <script src="tinycolor-min.js"></script>
 <script src="audioMotion-analyzer.js"></script>
-
+  <link rel="stylesheet" href="retrox.css">
 
 
 <body id="body" onload="loadcheck();" >
+<div class="sunny"><div class="sun"></div>
+</div>
 <div class="overlay"></div>
 <div class="overlay glitch"></div>
-	
+		  	  
+	  	
+	<div id="selectstation"  style="width:1075px;height:150px;z-index:0;position:absolute;left:0;right:0;margin:0 auto; top:160px;"></div>
+
+
 	
 	<div style="left:0;right:0;margin: 0 auto;bottom:32px;position:absolute;">
 <img src="hut.png" width="1075" height="1075" style="position:relative;top:360px;"></div>
@@ -64,11 +70,21 @@ li {
 	line-height: 12px;
 	list-style-type:none;
 }
-html, body {
+
+html {
+    background: #000;
+    max-width: 1075px;
+    left:0;
+    right:0;
+    position: absolute;
+    overflow: hidden;
+}
+body {
 	max-width: 1075px;
 	width:1075px;
 	margin: 0 auto;
-	background: linear-gradient(#08183A,#2583e1,#98d0fa,#fff);
+	
+	background: linear-gradient(#000033 5%,black 65%, deeppink, violet);
 	background-repeat: no-repeat;
 	left:0;
 	right:0;
@@ -380,10 +396,6 @@ function loadcheck()
 
 	  </div>	  
 	  
-	  	  
-	  	
-	<div id="selectstation"  style="width:80px;height:14px;z-index:99;position:absolute;left:0;right:0;margin:0 auto; top:0px;"></div>
-
 
 
 	  
@@ -714,7 +726,7 @@ function loadcheck()
       audioMotion = new AudioMotionAnalyzer( document.getElementById('selectstation'), {
       	  
 					 radial:false,
-           mode: 8,
+           mode: 3,
            showLeds: true,
            showPeaks: true,
            showBgColor  : false,
@@ -836,7 +848,7 @@ background: linear-gradient( black, red, orange, gold, yellowgreen,  lawngreen, 
  </style>
 
 <div style="width:200px;float:right;height:64px;right:0px;margin-top:200px;">
-	<span style="font-size:64px;font-family:blacksword;color:#fff">Bliss</span>
+	<span style="font-size:64px;font-family:blacksword;color:#fff">Synthetic</span>
 	</div>
 <!--
 <div class="content-wrap a-scanlines a-noise">
@@ -872,7 +884,7 @@ background: linear-gradient( black, red, orange, gold, yellowgreen,  lawngreen, 
 </div></div></div></div></div>
 </div></div>
 
-<div style="font-family:neue;color:#000;width:1075px;text-align:center;height:48px;left:0;riGht:0;margin:0 auto;top:424px;position:absolute;background:#fff;">
+<div style="font-family:neue;color:#aaa;width:1075px;text-align:center;height:48px;left:0;riGht:0;margin:0 auto;top:424px;position:absolute;background:#000;">
        <a href="markdown/markdown.php" target="_blank">Markdown</a> &nbsp;|&nbsp;
     <a href="https://sourceforge.net/u/lexterror" target="_blank">SourceForge</a>&nbsp;|&nbsp;
        <a href="https://blendswap.com/profile/1250833/blends" target="_blank">Blendswap</a> &nbsp;|&nbsp;
@@ -968,8 +980,8 @@ audioMotion.registerGradient( 'classic', {
   bgColor: '#000',
   colorStops: [
  
-         'hsl(0,0%,100%)',
-          'hsl(0,0%,100%)',
+         'dodgerblue',
+          '#ea3385',
   // hslchanger,
     
 

@@ -1761,7 +1761,7 @@ class AudioMotionAnalyzer {
 			minDecibels  : -85,
 			maxDecibels  : -25,
 			showBgColor  : false,
-			showLeds     : false,
+			showLeds     : true,
 			showScaleX   : false,
 			showScaleY   : false,
 			showPeaks    : true,
@@ -1783,7 +1783,7 @@ class AudioMotionAnalyzer {
 			splitGradient: true,
 			start        : true,
 			volume       : 1,
-			mirror       : 0,
+			mirror       : 1,
 		};
 
 		// callback functions properties
