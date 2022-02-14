@@ -956,8 +956,8 @@ audioMotion.registerGradient( 'classic', {
   bgColor: '#000',
   colorStops: [
  
-         'hsl(210,100%,56%)',
-          'hsl(203,92%,75%)',
+         'hsl(0,0%,0%)',
+          'hsl(0,0%,0%)',
   // hslchanger,
     
 
