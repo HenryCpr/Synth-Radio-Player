@@ -22,7 +22,9 @@
 <div class="overlay glitch"></div>
 	
 	
-	<div id="selectstation"  style="width:1075px;position:absolute;height:100px;z-index:0;bottom:48px;margin-bottom:0;transform: scale(1.4) perspective(400px) rotateX(45deg);left:0;right:0;margin:0 auto;"></div>
+	<div style="left:0;right:0;margin: 0 auto;bottom:32px;position:absolute;">
+<img src="hut.png" width="1075" height="715"></div>
+
 <div class="bg"><!-- perspective(400px) rotateX(45deg) -->
   
   <div class="pat2"></div>
@@ -345,9 +347,9 @@ function loadcheck()
 </div>
 
 
-      <div style="position:relative;width:200px;height:16px;float:left;z-index:99999999999;">
+      <div style="position:relative;width:150px;height:16px;float:left;z-index:99999999999;">
        <div class="container" style="float:left;">
-        <div class="custom-select-wrapper" style="right:0;width:200px;height:16px !important;">
+        <div class="custom-select-wrapper" style="right:0;width:150px;height:16px !important;">
             <div class="custom-select" style="height:16px !important;">
              <div class="custom-select__trigger shadowz"><span></span>
                     <div class="arrow"></div>
@@ -377,7 +379,17 @@ function loadcheck()
 
 
 	  </div>	  
-      <div style="background: #000;width:200px;height:8px;position:absolute;right:200;margin:0 auto;border-radius:8px;top: 0; bottom:0;margin: 0px;vertical-align: middle;margin-top:3px;">
+	  
+	  	  
+	  	
+	<div id="selectstation"  style="width:80px;height:14px;z-index:99;position:absolute;left:0;right:0;margin:0 auto; top:0px;"></div>
+
+
+
+	  
+      <div style="background: #000;width:150px;height:8px;position:absolute;right:200;margin:0 auto;border-radius:8px;top: 0; bottom:0;margin: 0px;vertical-align: middle;margin-top:3px;">
+	  
+	  
 	  <div id="volume"></div></div>
 	  <button id="stop" style=
       "right:0;float:right;outline:none;background-color: Transparent;width:78px;border:0;background-image:url(stopbutton.svg);background-size:78px 16px;padding: 0px;height:16px;cursor:pointer;"></button>
@@ -702,8 +714,8 @@ function loadcheck()
       audioMotion = new AudioMotionAnalyzer( document.getElementById('selectstation'), {
       	  
 					 radial:false,
-           mode: 3,
-           showLeds: false,
+           mode: 8,
+           showLeds: true,
            showPeaks: true,
            showBgColor  : false,
     });
@@ -956,8 +968,8 @@ audioMotion.registerGradient( 'classic', {
   bgColor: '#000',
   colorStops: [
  
-         'hsl(0,0%,0%)',
-          'hsl(0,0%,0%)',
+         'hsl(0,0%,100%)',
+          'hsl(0,0%,100%)',
   // hslchanger,
     
 

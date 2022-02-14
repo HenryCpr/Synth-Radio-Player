@@ -1783,7 +1783,7 @@ class AudioMotionAnalyzer {
 			splitGradient: true,
 			start        : true,
 			volume       : 1,
-			mirror       : -1,
+			mirror       : 0,
 		};
 
 		// callback functions properties
