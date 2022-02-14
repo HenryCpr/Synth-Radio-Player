@@ -23,7 +23,7 @@
 	
 	
 	<div style="left:0;right:0;margin: 0 auto;bottom:32px;position:absolute;">
-<img src="hut.png" width="1075" height="715"></div>
+<img src="hut.png" width="1075" height="1075" style="position:relative;top:360px;"></div>
 
 <div class="bg"><!-- perspective(400px) rotateX(45deg) -->
   
@@ -39,7 +39,7 @@
 	
 
 	
-	<div style="position:relative;top:180px;right:0;left:0;width:1075px;margin:0 auto;text-align:center;z-index:0;height:64px;line-height:32px;transform: scale(1.4) perspective(400px) rotateX(45deg) ; z-index:9999;">
+	<div style="position:relative;top:100px;right:0;left:0;width:1075px;margin:0 auto;text-align:center;z-index:0;height:64px;line-height:32px;transform: scale(1.4) perspective(400px) rotateX(45deg) ; z-index:9999;">
 	  <div class="shadowz" id="metabox" class="scroll-box" style=
     "overflow: hidden;left:0;right:0;position:absolute;height: 64px; width:1075px;z-index:0;text-align:center">
       <div id="metadata" class="scroll-text" style=
