@@ -1761,7 +1761,7 @@ class AudioMotionAnalyzer {
 			minDecibels  : -85,
 			maxDecibels  : -25,
 			showBgColor  : false,
-			showLeds     : true,
+			showLeds     : false,
 			showScaleX   : false,
 			showScaleY   : false,
 			showPeaks    : true,

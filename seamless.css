@@ -1,11 +1,11 @@
 .bg {
   position: absolute;
   z-index:0;
-  opacity: 1;
+  opacity: 0.5;
   top: 0px;
   left: 0;
   height: 350px;
-  width: 100%;
+  width: 1075px;
   
  -webkit-mask-image: linear-gradient(black, transparent);
   mask-image: linear-gradient(black, transparent);
@@ -95,6 +95,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #fff;
+  background:#fff;
 }
 
 .content {
