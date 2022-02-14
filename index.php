@@ -90,7 +90,7 @@ html, body {
   background-color: transparent;
   background-size: 5px 5px, 5px 5px;
   background-position: -1px -1px, -1px -1px;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5) 1px,transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px,transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   
   z-index: 1;
 }
