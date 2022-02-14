@@ -15,16 +15,20 @@
 <script src="tinycolor-min.js"></script>
 <script src="audioMotion-analyzer.js"></script>
   <link rel="stylesheet" href="retrox.css">
-
+  <link rel="stylesheet" href="stars.css">
 
 <body id="body" onload="loadcheck();" >
 <div class="sunny"><div class="sun"></div>
 </div>
 <div class="overlay"></div>
 <div class="overlay glitch"></div>
+
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
 		  	  
 	  	
-	<div id="selectstation"  style="transform:perspective(400px) rotateX(45deg); opacity:0.9;width:1075px;height:64px;z-index:0;position:absolute;left:0;right:0;margin:0 auto; top:200px;"></div>
+	<div id="selectstation"  style="transform:perspective(400px) rotateX(45deg); opacity:0.9;width:1075px;height:128px;z-index:0;position:absolute;left:0;right:0;margin:0 auto; top:200px;"></div>
 
 
 	
@@ -83,7 +87,7 @@ body {
 	width:1075px;
 	margin: 0 auto;
 	
-	background: linear-gradient(#312649 5%,black 65%);
+	background: linear-gradient(#312649 5%,black 65%, deeppink);
 	background-repeat: no-repeat;
 	left:0;
 	right:0;

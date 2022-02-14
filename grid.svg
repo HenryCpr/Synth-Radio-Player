@@ -36,6 +36,44 @@
          result="blur"
          id="feGaussianBlur3933" />
     </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter284">
+      <feGaussianBlur
+         stdDeviation="8.4 8.4"
+         result="fbSourceGraphic"
+         id="feGaussianBlur282" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix290" />
+      <feGaussianBlur
+         id="feGaussianBlur292"
+         stdDeviation="8.4 8.4"
+         result="blur"
+         in="fbSourceGraphic" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter288">
+      <feGaussianBlur
+         stdDeviation="8.4 8.4"
+         result="fbSourceGraphic"
+         id="feGaussianBlur286" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix294" />
+      <feGaussianBlur
+         id="feGaussianBlur296"
+         stdDeviation="8.4 8.4"
+         result="blur"
+         in="fbSourceGraphic" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -48,7 +86,7 @@
      inkscape:cx="-137.91509"
      inkscape:cy="812.16265"
      inkscape:document-units="mm"
-     inkscape:current-layer="g242"
+     inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1366"
      inkscape:window-height="729"
@@ -69,190 +107,18 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="Layer 2"
-     style="display:inline"
-     sodipodi:insensitive="true">
-    <g
-       id="g45-1"
-       transform="matrix(1.3809524,0,0,1,86.682545,57.541667)"
-       style="fill:#ff2a7f;filter:url(#filter3935)">
-      <path
-         inkscape:connector-curvature="0"
-         id="rect12-9"
-         d="m -116.41666,43 h 444.5 v 10.583333 h -444.5 z"
-         style="fill:#ff2a7f;stroke-width:0.26458332" />
-      <path
-         inkscape:connector-curvature="0"
-         id="rect12-2-7"
-         d="m -116.41667,275.83334 h 444.5 v 10.58333 h -444.5 z"
-         style="fill:#ff2a7f;stroke-width:0.26458332" />
-    </g>
-    <g
-       id="g49-1"
-       transform="matrix(1,0,0,1.3809524,116.41667,-1.928572)"
-       style="fill:#ff2a7f;filter:url(#filter3931)">
-      <rect
-         transform="matrix(0,-1,-1,0,0,0)"
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         y="3.1789145e-007"
-         x="-392.25"
-         height="10.583333"
-         width="444.5"
-         id="rect12-7-5" />
-      <rect
-         transform="rotate(90)"
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         y="-222.25"
-         x="-52.25"
-         height="10.583333"
-         width="444.5"
-         id="rect12-79-5" />
-    </g>
-  </g>
-  <g
-     sodipodi:insensitive="true"
-     style="display:inline"
-     inkscape:label="Layer 2 copy 1"
-     id="g228"
-     inkscape:groupmode="layer">
-    <g
-       style="fill:#ff2a7f;filter:url(#filter3935)"
-       transform="matrix(1.3809524,0,0,1,86.682545,57.541667)"
-       id="g220">
-      <path
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         d="m -116.41666,43 h 444.5 v 10.583333 h -444.5 z"
-         id="path216"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         d="m -116.41667,275.83334 h 444.5 v 10.58333 h -444.5 z"
-         id="path218"
-         inkscape:connector-curvature="0" />
-    </g>
-    <g
-       style="fill:#ff2a7f;filter:url(#filter3931)"
-       transform="matrix(1,0,0,1.3809524,116.41667,-1.928572)"
-       id="g226">
-      <rect
-         id="rect222"
-         width="444.5"
-         height="10.583333"
-         x="-392.25"
-         y="3.1789145e-007"
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         transform="matrix(0,-1,-1,0,0,0)" />
-      <rect
-         id="rect224"
-         width="444.5"
-         height="10.583333"
-         x="-52.25"
-         y="-222.25"
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         transform="rotate(90)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="g242"
-     inkscape:label="Layer 2 copy 1 copy"
-     style="display:inline"
-     sodipodi:insensitive="true">
-    <g
-       id="g234"
-       transform="matrix(1.3809524,0,0,1,86.682545,57.541667)"
-       style="fill:#ff2a7f;filter:url(#filter3935)">
-      <path
-         inkscape:connector-curvature="0"
-         id="path230"
-         d="m -116.41666,43 h 444.5 v 10.583333 h -444.5 z"
-         style="fill:#ff2a7f;stroke-width:0.26458332" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path232"
-         d="m -116.41667,275.83334 h 444.5 v 10.58333 h -444.5 z"
-         style="fill:#ff2a7f;stroke-width:0.26458332" />
-    </g>
-    <g
-       id="g240"
-       transform="matrix(1,0,0,1.3809524,116.41667,-1.928572)"
-       style="fill:#ff2a7f;filter:url(#filter3931)">
-      <rect
-         transform="matrix(0,-1,-1,0,0,0)"
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         y="3.1789145e-007"
-         x="-392.25"
-         height="10.583333"
-         width="444.5"
-         id="rect236" />
-      <rect
-         transform="rotate(90)"
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         y="-222.25"
-         x="-52.25"
-         height="10.583333"
-         width="444.5"
-         id="rect238" />
-    </g>
-  </g>
-  <g
-     sodipodi:insensitive="true"
-     style="display:inline"
-     inkscape:label="Layer 2 copy 1 copy copy"
-     id="g256"
-     inkscape:groupmode="layer">
-    <g
-       style="fill:#ff2a7f;filter:url(#filter3935)"
-       transform="matrix(1.3809524,0,0,1,86.682545,57.541667)"
-       id="g248">
-      <path
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         d="m -116.41666,43 h 444.5 v 10.583333 h -444.5 z"
-         id="path244"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         d="m -116.41667,275.83334 h 444.5 v 10.58333 h -444.5 z"
-         id="path246"
-         inkscape:connector-curvature="0" />
-    </g>
-    <g
-       style="fill:#ff2a7f;filter:url(#filter3931)"
-       transform="matrix(1,0,0,1.3809524,116.41667,-1.928572)"
-       id="g254">
-      <rect
-         id="rect250"
-         width="444.5"
-         height="10.583333"
-         x="-392.25"
-         y="3.1789145e-007"
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         transform="matrix(0,-1,-1,0,0,0)" />
-      <rect
-         id="rect252"
-         width="444.5"
-         height="10.583333"
-         x="-52.25"
-         y="-222.25"
-         style="fill:#ff2a7f;stroke-width:0.26458332"
-         transform="rotate(90)" />
-    </g>
-  </g>
-  <g
-     sodipodi:insensitive="true"
      style="display:inline"
      inkscape:label="Layer 2 copy"
      id="g214"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     sodipodi:insensitive="true">
     <g
-       style="fill:#ff2a7f;filter:url(#filter3935)"
+       style="fill:#ff2a7f;filter:url(#filter288)"
        transform="matrix(1.3809524,0,0,1,86.682545,57.541667)"
        id="g206">
       <path
@@ -267,7 +133,7 @@
          inkscape:connector-curvature="0" />
     </g>
     <g
-       style="fill:#ff2a7f;filter:url(#filter3931)"
+       style="fill:#ff2a7f;filter:url(#filter284)"
        transform="matrix(1,0,0,1.3809524,116.41667,-1.928572)"
        id="g212">
       <rect
@@ -289,33 +155,76 @@
     </g>
   </g>
   <g
+     inkscape:groupmode="layer"
+     id="g310"
+     inkscape:label="Layer 2 copy copy"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <g
+       id="g302"
+       transform="matrix(1.3809524,0,0,1,86.682545,57.541667)"
+       style="fill:#ff2a7f;filter:url(#filter288)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path298"
+         d="m -116.41666,43 h 444.5 v 10.583333 h -444.5 z"
+         style="fill:#ff2a7f;stroke-width:0.26458332" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path300"
+         d="m -116.41667,275.83334 h 444.5 v 10.58333 h -444.5 z"
+         style="fill:#ff2a7f;stroke-width:0.26458332" />
+    </g>
+    <g
+       id="g308"
+       transform="matrix(1,0,0,1.3809524,116.41667,-1.928572)"
+       style="fill:#ff2a7f;filter:url(#filter284)">
+      <rect
+         transform="matrix(0,-1,-1,0,0,0)"
+         style="fill:#ff2a7f;stroke-width:0.26458332"
+         y="3.1789145e-007"
+         x="-392.25"
+         height="10.583333"
+         width="444.5"
+         id="rect304" />
+      <rect
+         transform="rotate(90)"
+         style="fill:#ff2a7f;stroke-width:0.26458332"
+         y="-222.25"
+         x="-52.25"
+         height="10.583333"
+         width="444.5"
+         id="rect306" />
+    </g>
+  </g>
+  <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(116.41667,52.25)"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <g
        id="g45"
        transform="translate(0,5.291665)"
-       style="fill:#ffffff">
+       style="fill:#ffaacc">
       <path
          inkscape:connector-curvature="0"
          id="rect12"
          d="m -116.41666,43 h 444.5 v 10.583333 h -444.5 z"
-         style="fill:#ffffff;stroke-width:0.26458332" />
+         style="fill:#ffaacc;stroke-width:0.26458332" />
       <path
          inkscape:connector-curvature="0"
          id="rect12-2"
          d="m -116.41667,275.83334 h 444.5 v 10.58333 h -444.5 z"
-         style="fill:#ffffff;stroke-width:0.26458332" />
+         style="fill:#ffaacc;stroke-width:0.26458332" />
     </g>
     <g
        id="g49"
        transform="translate(1.6666667e-6)"
-       style="fill:#ffffff">
+       style="fill:#ffaacc">
       <rect
          transform="matrix(0,-1,-1,0,0,0)"
-         style="fill:#ffffff;stroke-width:0.26458332"
+         style="fill:#ffaacc;stroke-width:0.26458332"
          y="3.1789145e-007"
          x="-392.25"
          height="10.583333"
@@ -323,7 +232,7 @@
          id="rect12-7" />
       <rect
          transform="rotate(90)"
-         style="fill:#ffffff;stroke-width:0.26458332"
+         style="fill:#ffaacc;stroke-width:0.26458332"
          y="-222.25"
          x="-52.25"
          height="10.583333"
