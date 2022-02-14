@@ -3,7 +3,7 @@
 .bg {
   position: absolute;
   z-index:0;
-  opacity: 0.5;
+  opacity: 1;
   bottom:48px;
   left: 0;
   height: 350px;
@@ -14,7 +14,7 @@
   mask-mode: alpha;
   background-color: transparent;
   overflow: hidden !important;
-  transform: scale(1.4) perspective(400px) rotateX(75deg) translateZ(-50px)  ;
+  transform: scale(1.4) perspective(400px) rotateX(85deg) translateZ(-50px)  ;
   transform-origin: 50% 50%;
 }
 
@@ -67,8 +67,9 @@
   left: -500px;
   height: calc(100% + 1000px);
   width: calc(100% + 1000px);
-  background-image: url("grid.png");
-  background-size: 500px 500px;
+
+  background-image: url("grid.svg");
+  background-size: 85px 85px;
   animation: scroll 20s linear infinite;
 }
 

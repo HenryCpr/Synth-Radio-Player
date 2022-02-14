@@ -24,7 +24,7 @@
 <div class="overlay glitch"></div>
 		  	  
 	  	
-	<div id="selectstation"  style="width:1075px;height:150px;z-index:0;position:absolute;left:0;right:0;margin:0 auto; top:160px;"></div>
+	<div id="selectstation"  style="transform:perspective(400px) rotateX(45deg); opacity:0.9;width:1075px;height:64px;z-index:0;position:absolute;left:0;right:0;margin:0 auto; top:200px;"></div>
 
 
 	
@@ -83,7 +83,7 @@ body {
 	width:1075px;
 	margin: 0 auto;
 	
-	background: linear-gradient(#000033 5%,black 65%, deeppink, violet);
+	background: linear-gradient(#312649 5%,black 65%);
 	background-repeat: no-repeat;
 	left:0;
 	right:0;
@@ -979,7 +979,7 @@ audioMotion.registerGradient( 'classic', {
   bgColor: '#000',
   colorStops: [
  
-         'dodgerblue',
+         'white',
           '#ea3385',
   // hslchanger,
     
