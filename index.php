@@ -22,7 +22,7 @@
 <div class="overlay glitch"></div>
 	
 	
-	<div id="selectstation"  style="width:1075px;position:absolute;height:100px;z-index:0;bottom:48px;margin-bottom:0;transform: scale(1.4) ;left:0;right:0;margin:0 auto;"></div>
+	<div id="selectstation"  style="width:1075px;position:absolute;height:100px;z-index:0;bottom:48px;margin-bottom:0;transform: scale(1.4) perspective(400px) rotateX(45deg);left:0;right:0;margin:0 auto;"></div>
 <div class="bg"><!-- perspective(400px) rotateX(45deg) -->
   
   <div class="pat2"></div>
@@ -957,7 +957,7 @@ audioMotion.registerGradient( 'classic', {
   colorStops: [
  
          'hsl(209,71%,59%)',
-          'hsl(0,0%,100%)',
+          'hsl(0,0%,0%)',
   // hslchanger,
     
 
