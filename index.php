@@ -28,8 +28,7 @@
 
 
 	
-	<div style="left:0;right:0;margin: 0 auto;bottom:32px;position:absolute;">
-<img src="hut.png" width="1075" height="1075" style="position:relative;top:360px;"></div>
+	
 
 <div class="bg"><!-- perspective(400px) rotateX(45deg) -->
   
