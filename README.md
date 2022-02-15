@@ -1,9 +1,10 @@
-# Bliss Radio Player
+# Synth Radio Player
 (Minimal JavaScript Internet Radio Player) with Visualization and Metadata<br><br>
 
 Live Demo: http://alext.rf.gd
 
 <br>
+https://www.youtube.com/watch?v=aWmNkyLkpiQ
 <br><br>
 
 
