@@ -28,7 +28,7 @@
 <div id='stars3'></div>
 		  	  
 	  	
-	<div id="selectstation"  style="transform:perspective(400px) rotateX(45deg); opacity:0.9;width:1075px;height:128px;z-index:0;position:absolute;left:0;right:0;margin:0 auto; top:200px;"></div>
+	<div id="selectstation"  style=" opacity:0.8;width:1075px;height:256px;z-index:0;position:absolute;left:0;right:0;margin:0 auto; top:64px;transform: perspective(400px) rotateX(0deg);"></div>
 
 
 	
@@ -65,6 +65,12 @@
 
 </script>
 <style>
+
+#selectstation {
+    -webkit-mask-image: radial-gradient(circle,transparent, transparent, black);
+  mask-image: radial-gradient(circle,  transparent, transparent, black);
+  mask-mode: alpha;
+}
 	
 li {
 	color: #fff;
@@ -111,7 +117,7 @@ body {
   background-color: transparent;
   background-size: 5px 5px, 5px 5px;
   background-position: -1px -1px, -1px -1px;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px ,transparent 1px)/* , linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)*/;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px ,transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   
   z-index: 1;
 }
@@ -729,9 +735,9 @@ function loadcheck()
       audioMotion = new AudioMotionAnalyzer( document.getElementById('selectstation'), {
       	  
 					 radial:false,
-           mode: 3,
-           showLeds: true,
-           showPeaks: true,
+           mode: 7,
+           showLeds: false,
+           showPeaks: false,
            showBgColor  : false,
     });
     
@@ -983,8 +989,9 @@ audioMotion.registerGradient( 'classic', {
   bgColor: '#000',
   colorStops: [
  
-         'white',
-          '#ea3385',
+         '#fff',
+         'deeppink',
+          '#000',
   // hslchanger,
     
 
