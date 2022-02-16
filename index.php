@@ -395,7 +395,7 @@ function loadcheck()
                          <span class="custom-option" data-value="9" onclick="getStation(9)">Aftermath FM</span>
                         <span class="custom-option" data-value="10" onclick="getStation(10)">Radio Tel Aviv</span>
                        <span class="custom-option" data-value="11" onclick="getStation(11)">PsyChill</span>
-                       <span class="custom-option" data-value="12" onclick="getStation(12)">Jazz4ever</span>
+                       <span class="custom-option" data-value="12" onclick="getStation(12)">Nostalgie Rock</span>
                         <span class="custom-option" data-value="13" onclick="getStation(13)">Dance Wave</span>
                 </div>
             </div></div></div></div>
@@ -572,7 +572,7 @@ function loadcheck()
     ultistring =  metadata.StreamTitle;
 
     };
-                player3 = new IcecastMetadataPlayer("http://stream.syntheticfm.com:8040/stream;", { onMetadata,});
+                player3 = new IcecastMetadataPlayer("https://stream.syntheticfm.com:8040/live", { onMetadata,metadataTypes: ("icy" ,"ogg"), codec: "vorbis",});
                 audioMotion.connectInput( player3.audioElement );
                 player3.play();
                        onMetadataFailed("icy") = (metadata) => {
@@ -702,7 +702,7 @@ function loadcheck()
       ultistring = metadata.StreamTitle;
         
     };
-        player12 = new IcecastMetadataPlayer("https://streamingv2.shoutcast.com/Jazz4ever", { onMetadata, });
+        player12 = new IcecastMetadataPlayer("https://streamingp.shoutcast.com/NostalgieRockClassics-aac", { onMetadata, });
                 audioMotion.connectInput( player12.audioElement );
                 player12.play();
 		                  onMetadataFailed("icy") = (metadata) => {
