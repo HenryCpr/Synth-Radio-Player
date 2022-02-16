@@ -87,6 +87,7 @@ html {
     right:0;
     position: absolute;
     overflow: hidden;
+    margin: 0 auto;
 }
 body {
 	max-width: 1075px;
